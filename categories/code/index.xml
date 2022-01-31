@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on anparis</title>
+    <link>https://anparis.github.io/categories/code/</link>
+    <description>Recent content in Code on anparis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Jan 2022 09:25:36 +0100</lastBuildDate><atom:link href="https://anparis.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I created this blog</title>
+      <link>https://anparis.github.io/post/2022/01/31/how-i-created-this-blog/</link>
+      <pubDate>Mon, 31 Jan 2022 09:25:36 +0100</pubDate>
+      
+      <guid>https://anparis.github.io/post/2022/01/31/how-i-created-this-blog/</guid>
+      <description>I simply followed the nicely explained video from Ryan Schachte
+My choice for this blog : hugo classic
+You can find every themes on hugo website</description>
+    </item>
+    
+  </channel>
+</rss>
