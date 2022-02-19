@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on anparis</title>
+    <title>antonin paris blog</title>
     <link>https://anparis.github.io/</link>
-    <description>Recent content in Home on anparis</description>
+    <description>Recent content on antonin paris blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Jan 2022 09:25:36 +0100</lastBuildDate><atom:link href="https://anparis.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Feb 2022 17:09:29 +0100</lastBuildDate><atom:link href="https://anparis.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How I created this blog</title>
-      <link>https://anparis.github.io/post/2022/01/31/how-i-created-this-blog/</link>
-      <pubDate>Mon, 31 Jan 2022 09:25:36 +0100</pubDate>
+      <title>How I created this blog, with Hugo</title>
+      <link>https://anparis.github.io/post/hugo_blog_creation/</link>
+      <pubDate>Fri, 18 Feb 2022 17:09:29 +0100</pubDate>
       
-      <guid>https://anparis.github.io/post/2022/01/31/how-i-created-this-blog/</guid>
-      <description>I simply followed the nicely explained video from Ryan Schachte
-My choice for this blog : hugo classic
-You can find every themes on hugo website</description>
+      <guid>https://anparis.github.io/post/hugo_blog_creation/</guid>
+      <description>In this post, I will just give a quick overview and hints of how I created the website with Hugo, I will not go into all the details. My main inspiration and what I was aiming for this blog was John L. Godlee blog  . A very well done blog in my opinion and I can only recommand you to check out his blog.
+For this blog, I actually wanted to understand how hugo worked, so I started from scratch with hugo basic theme and used the book &amp;ldquo;Brian P.</description>
+    </item>
+    
+    <item>
+      <title>CV</title>
+      <link>https://anparis.github.io/cv/</link>
+      <pubDate>Thu, 03 Feb 2022 10:25:00 +0100</pubDate>
+      
+      <guid>https://anparis.github.io/cv/</guid>
+      <description>I only have a French CV for the moment, that can be downloaded here  .</description>
+    </item>
+    
+    <item>
+      <title>Awesomeco</title>
+      <link>https://anparis.github.io/projects/awesomeco/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://anparis.github.io/projects/awesomeco/</guid>
+      <description>Premier projet ever
+Tech used  python item item  </description>
     </item>
     
   </channel>

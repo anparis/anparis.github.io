@@ -2,20 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://anparis.github.io/categories/</loc>
-    <lastmod>2022-01-31T09:25:36+01:00</lastmod>
-  </url><url>
-    <loc>https://anparis.github.io/categories/code/</loc>
-    <lastmod>2022-01-31T09:25:36+01:00</lastmod>
-  </url><url>
     <loc>https://anparis.github.io/</loc>
-    <lastmod>2022-01-31T09:25:36+01:00</lastmod>
+    <lastmod>2022-02-18T17:09:29+01:00</lastmod>
+    <priority>0</priority>
   </url><url>
-    <loc>https://anparis.github.io/post/2022/01/31/how-i-created-this-blog/</loc>
-    <lastmod>2022-01-31T09:25:36+01:00</lastmod>
+    <loc>https://anparis.github.io/post/hugo_blog_creation/</loc>
+    <lastmod>2022-02-18T17:09:29+01:00</lastmod>
   </url><url>
     <loc>https://anparis.github.io/post/</loc>
-    <lastmod>2022-01-31T09:25:36+01:00</lastmod>
+    <lastmod>2022-02-18T17:09:29+01:00</lastmod>
+  </url><url>
+    <loc>https://anparis.github.io/cv/</loc>
+    <lastmod>2022-02-03T10:25:00+01:00</lastmod>
+  </url><url>
+    <loc>https://anparis.github.io/projects/awesomeco/</loc>
+  </url><url>
+    <loc>https://anparis.github.io/categories/</loc>
+  </url><url>
+    <loc>https://anparis.github.io/projects/</loc>
   </url><url>
     <loc>https://anparis.github.io/tags/</loc>
   </url>
