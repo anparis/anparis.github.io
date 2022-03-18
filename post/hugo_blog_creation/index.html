@@ -36,8 +36,9 @@
   John L. Godlee blog
 </a>
 
-. A very well done blog in my opinion and I can only recommand you to check out his blog.</p>
-<p>For this blog, I actually wanted to understand how hugo worked, so I started from scratch with hugo basic theme and used the book <em>&ldquo;Brian P. Hogan - Build Websites with Hugo Fast Web Development with Markdown ( 2020, Pragmatic Bookshelf )</em>&rdquo; which is like an &lsquo;how-to&rsquo; guide and helped me to understand layouts in Hugo. I also used Hugo documentation for complementary explanations.</p>
+. A very well done blog in my opinion and I can only recommand you to take a look at his blog.</p>
+<p>For this blog, I actually wanted to understand how hugo worked, so I started from scratch with hugo basic theme and used the book <em>&ldquo;Brian P. Hogan - Build Websites with Hugo Fast Web Development with Markdown ( 2020, Pragmatic Bookshelf )</em>&rdquo; which is like an &lsquo;how-to&rsquo; guide and helped me to understand layouts in Hugo. I also used Hugo documentation.</p>
+<p>The hugo files are available on my github in the &lsquo;blog&rsquo; repository.</p>
 <h3 id="the-main-problems">The main problems</h3>
 <ul>
 <li>Date format for my blog posts</li>
@@ -83,13 +84,13 @@ pygmentsCodefences = true
 </code></pre></div><p>And then I just couldn&rsquo;t find how to make it work until I changed the location of syntax.css in my <code>blog/anparis/themes/basic/static/css/</code> folder which was before located in <code>blog/anparis/themes/basic/</code> and then it worked !</p>
 <p>PS : Don&rsquo;t forget to change the path <code>/syntax.css</code> into <code>css/syntax.css</code> in <code>head.html</code>.</p>
 <p>/<strong>clickable icons problem</strong></p>
-<p>Once that I found out the existence of <a href="https://fontawesome.com/" target="_blank">
+<p>Once that I discovered the existence of <a href="https://fontawesome.com/" target="_blank">
   font awesome
 </a>
 
-, adding incons worked like a charm.</p>
-<p>To use it, you need to subscribe in order to receive a script that you then add to your head.html (No idea if you can manage to make it work without subscription).</p>
-<p>Then you just add to copy paste the icon that you want in your html code, for example the github icon :</p>
+, adding icons worked like a charm.</p>
+<p>To use it, I subscribed to receive a script that I could then add to my head.html (No idea if you can manage to make it work without subscription).</p>
+<p>Then you just have to copy paste the icon that you want in your html code, for example the github icon :</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-brands fa-github&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
 </code></pre></div><p>And the icon will appear on your website and you can customize it with your css stylesheet.</p>
 
