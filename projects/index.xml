@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on antonin paris blog</title>
+    <title>Projects on Antonin Paris blog</title>
     <link>https://anparis.github.io/projects/</link>
-    <description>Recent content in Projects on antonin paris blog</description>
+    <description>Recent content in Projects on Antonin Paris blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://anparis.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Awesomeco</title>
-      <link>https://anparis.github.io/projects/awesomeco/</link>
+      <title>Card Challenge</title>
+      <link>https://anparis.github.io/projects/card_challenge/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anparis.github.io/projects/awesomeco/</guid>
-      <description>Premier projet ever
-Tech used  python item item  </description>
+      <guid>https://anparis.github.io/projects/card_challenge/</guid>
+      <description>Description&amp;hellip;
+Tech used  Html/CSS Flexbox Bem notation  </description>
     </item>
     
   </channel>

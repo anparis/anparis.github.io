@@ -20,12 +20,13 @@
             <section class="navbar"><nav>
     <a href="/">Home</a>
     <a href="/post">Posts</a>
+    <a href="/projects">Projects</a>
     <a href="/cv">CV</a> 
     <hr>
 </nav>
   
 </section>
-<div class="postarticle">
+<div class="postarticle main__container">
   <h2>How I created this blog, with Hugo</h2>
     <h3>2022-02-18</h3>
 
@@ -52,34 +53,34 @@
 
  but I spend some time to find it.</p>
 <p>I added <code>{{ .Date.Format &quot;2006-01-02&quot;  }}</code> in front of my blog post titles in my <em>list.html</em> file  :</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">{{ .Date.Format &#34;2006-01-02&#34;  }} - <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</code></pre></div><p>/<strong>posts display on index page problem</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ .Date.Format &#34;2006-01-02&#34;  }} - <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>/<strong>posts display on index page problem</strong></p>
 <p>To solve this problem I added these lines to my <code>index.html</code> file :</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;posts&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-    {{ range first 10 (where .Site.RegularPages &#34;Type&#34; &#34;in&#34; &#34;posts&#34;).ByDate.Reverse }} 
-    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
-      {{ .Date.Format &#34;2006-01-02&#34;  }} - <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    {{ end }}
-  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</code></pre></div><p>Where :</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;posts&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ range first 10 (where .Site.RegularPages &#34;Type&#34; &#34;in&#34; &#34;posts&#34;).ByDate.Reverse }} 
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      {{ .Date.Format &#34;2006-01-02&#34;  }} - <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Where :</p>
 <p><code>range first 10</code> to display 10 posts only.</p>
 <p><code>.ByDate.Reverse</code> to display the posts from the latest to the oldest.</p>
 <p>/<strong>code block problem</strong></p>
 <p>To custom code blocks, I added 2 lines in my <code>config.toml</code> to make syntax highlighting work.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain">pygmentsUseClasses = true
-pygmentsCodefences = true
-</code></pre></div><p>I chosed a <a href="https://xyproto.github.io/splash/docs/" target="_blank">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">pygmentsUseClasses = true
+</span></span><span class="line"><span class="cl">pygmentsCodefences = true
+</span></span></code></pre></div><p>I chosed a <a href="https://xyproto.github.io/splash/docs/" target="_blank">
   chroma style
 </a>
 
  to color my code blocks. Personally, I chosed the style <em>friendly</em> and added it with this command :</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo gen chromastyles --style<span class="o">=</span>friendly &gt; syntax.css
-</code></pre></div><p>Then I added syntax.css in my <code>head.html</code> file</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ &#34;</span><span class="err">/</span><span class="na">syntax</span><span class="err">.</span><span class="na">css</span><span class="err">&#34;</span> <span class="err">|</span> <span class="na">relURL</span> <span class="err">}}&#34;</span> <span class="p">/&gt;</span>
-</code></pre></div><p>And then I just couldn&rsquo;t find how to make it work until I changed the location of syntax.css in my <code>blog/anparis/themes/basic/static/css/</code> folder which was before located in <code>blog/anparis/themes/basic/</code> and then it worked !</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo gen chromastyles --style<span class="o">=</span>friendly &gt; syntax.css
+</span></span></code></pre></div><p>Then I added syntax.css in my <code>head.html</code> file</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ &#34;</span><span class="err">/</span><span class="na">syntax</span><span class="err">.</span><span class="na">css</span><span class="err">&#34;</span> <span class="err">|</span> <span class="na">relURL</span> <span class="err">}}&#34;</span> <span class="p">/&gt;</span>
+</span></span></code></pre></div><p>And then I just couldn&rsquo;t find how to make it work until I changed the location of syntax.css in my <code>blog/anparis/themes/basic/static/css/</code> folder which was before located in <code>blog/anparis/themes/basic/</code> and then it worked !</p>
 <p>PS : Don&rsquo;t forget to change the path <code>/syntax.css</code> into <code>css/syntax.css</code> in <code>head.html</code>.</p>
 <p>/<strong>clickable icons problem</strong></p>
 <p>Once that I discovered the existence of <a href="https://fontawesome.com/" target="_blank">
@@ -89,8 +90,8 @@ pygmentsCodefences = true
 , adding icons worked like a charm.</p>
 <p>To use it, I subscribed to receive a script that I could then add to my head.html (No idea if you can manage to make it work without subscription).</p>
 <p>Then you just have to copy paste the icon that you want in your html code, for example the github icon :</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-brands fa-github&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-</code></pre></div><p>And the icon will appear on your website and you can customize it with your css stylesheet.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-brands fa-github&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>And the icon will appear on your website and you can customize it with your css stylesheet.</p>
 
 </div>
 
