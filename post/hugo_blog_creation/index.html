@@ -31,11 +31,7 @@
     <h3>2022-02-18</h3>
 
   
-  <p>In this post, I will just give a quick overview and hints of how I created the website with Hugo, I will not go into all the details. My main inspiration and what I was aiming for this blog was <a href="http://johngodlee.xyz/" target="_blank">
-  John L. Godlee blog
-</a>
-
-.</p>
+  <p>In this post, I will just give a quick overview and hints of how I created the website with Hugo, I will not go into all the details. My main inspiration and what I was aiming for this blog was <a href="http://johngodlee.xyz/" target="_blank">John L. Godlee blog</a>.</p>
 <p>For this blog, I actually wanted to understand how hugo worked, so I started from scratch with hugo basic theme and used the book <em>&ldquo;Brian P. Hogan - Build Websites with Hugo Fast Web Development with Markdown ( 2020, Pragmatic Bookshelf )</em>&rdquo; which is like an &lsquo;how-to&rsquo; guide and helped me to understand layouts in Hugo. I also used Hugo documentation.</p>
 <p>The hugo files are available on my github in the &lsquo;blog&rsquo; repository.</p>
 <h3 id="the-main-problems">The main problems</h3>
@@ -47,11 +43,7 @@
 </ul>
 <h3 id="the-solutions">The solutions</h3>
 <h4 id="date-format">Date format</h4>
-<p>It was actually well documented on <a href="https://gohugo.io/functions/format/" target="_blank">
-  https://gohugo.io/functions/format/
-</a>
-
- but I spend some time to find it.</p>
+<p>It was actually well documented on <a href="https://gohugo.io/functions/format/" target="_blank">https://gohugo.io/functions/format/</a>  but it took me some time to find it.</p>
 <p>I added {{ .Date.Format &ldquo;2006-01-02&rdquo;  }} in front of my blog post titles in my list.html file :</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ .Date.Format &#34;2006-01-02&#34;  }} - <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h4 id="posts-display">Posts display</h4>
@@ -72,26 +64,14 @@
 <p>To custom code blocks, I added 2 lines in my config.toml to make syntax highlighting work.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">pygmentsUseClasses = true
 </span></span><span class="line"><span class="cl">pygmentsCodefences = true
-</span></span></code></pre></div><p>I chosed a <a href="https://xyproto.github.io/splash/docs/" target="_blank">
-  chroma style
-</a>
-
- to add colors to my code blocks. Personally, I opted for the style <em>friendly</em>. You can use this command to add it :</p>
+</span></span></code></pre></div><p>I chosed a <a href="https://xyproto.github.io/splash/docs/" target="_blank">chroma style</a> to add colors to my code blocks. Personally, I opted for the style <em>friendly</em>. You can use this command to add it :</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo gen chromastyles --style<span class="o">=</span>friendly &gt; syntax.css
 </span></span></code></pre></div><p>Then I added syntax.css in my head.html file</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ &#34;</span><span class="err">/</span><span class="na">syntax</span><span class="err">.</span><span class="na">css</span><span class="err">&#34;</span> <span class="err">|</span> <span class="na">relURL</span> <span class="err">}}&#34;</span> <span class="p">/&gt;</span>
 </span></span></code></pre></div><p>The <code>/syntax.css</code> file needs to be located in <code>blog/anparis/themes/basic/static/css/</code> to make syntax highlighting work.</p>
 <h4 id="clickable-icons">Clickable icons</h4>
-<p><strong>EDIT</strong> : I was using <a href="https://fontawesome.com/" target="_blank">
-  font awesome
-</a>
-
- to manage icons in my footer but I realized that it was making my website heavy and I don&rsquo;t want to rely on external libraries.</p>
-<p>The replacement I found to font awesome is <a href="https://icon-sets.iconify.design/" target="_blank">
-  iconify
-</a>
-
-. I can select my icon and take the svg code associated with it.</p>
+<p><strong>EDIT</strong> : I was using <a href="https://fontawesome.com/" target="_blank">font awesome</a> to manage icons in my footer but I realized that it was making my website heavy and I don&rsquo;t want to rely on external libraries.</p>
+<p>The replacement I found to font awesome is <a href="https://icon-sets.iconify.design/" target="_blank">iconify</a>. I can select my icon and take the svg code associated with it.</p>
 <p>Then I add the svg icons in my footer :</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;YOUR LINK&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span>
